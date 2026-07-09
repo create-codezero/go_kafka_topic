@@ -1,0 +1,7 @@
+go run main.go  => to compile a single go file 
+
+go run .go      => runs all the go files 
+
+build main.go   => builds the exe from the compile code 
+
+main.exe        => run the exe file
