@@ -1,7 +1,3 @@
-Here is a professional and comprehensive `README.md` file for your project. It covers the architecture, setup instructions (including the WSL 2 nuance you solved), and usage.
-
-You can save this as `README.md` in your `D:\Projects\go_lang` directory.
-
 ```markdown
 # Go Kafka Event Streaming Pipeline
 
