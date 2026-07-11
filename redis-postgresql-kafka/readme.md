@@ -2,7 +2,6 @@ Here is a complete, advanced, and production-ready README.md for your project. I
 
 You can copy and paste this code directly into your README.md file:
 
-Markdown
 # ⚡ AuraStream: Resilient Real-Time Transaction Processor
 
 A high-throughput, fault-tolerant financial transaction consumer built in **Go**. The system ingests streaming transaction data from **Apache Kafka**, commits it to **PostgreSQL**, and utilizes **Redis** as an active write-fallback mechanism to ensure zero data loss during database degradation or network partitions.
@@ -17,6 +16,8 @@ graph TD
     B -->|Ingest Stream| C[Go Consumer App]
     C -->|1. Attempt Commit| D[(PostgreSQL)]
     C -.->|2. Fallback Cache if DB Down| E[(Redis Cache)]
+
+
 Key Capabilities
 Event-Driven Ingestion: Continuous high-speed stream processing via kafka-go.
 
