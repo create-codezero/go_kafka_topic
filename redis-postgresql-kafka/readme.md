@@ -15,7 +15,7 @@ graph TD
     A[Data Source / Producer] -->|JSON Payload| B(Apache Kafka Topic: financial-transactions)
     B -->|Ingest Stream| C[Go Consumer App]
     C -->|1. Attempt Commit| D[(PostgreSQL)]
-    C -.->|2. Fallback Cache if DB Down| E[(Redis Cache)]
+    C -.->|2. Fallback Cache if DB Down| E[(Redis Cache)]```
 
 
 Key Capabilities
