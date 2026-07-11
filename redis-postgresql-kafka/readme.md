@@ -12,10 +12,14 @@ A high-throughput, fault-tolerant financial transaction consumer built in **Go**
 
 ```mermaid
 graph TD
-    A[Data Source / Producer] -->|JSON Payload| B(Apache Kafka Topic: financial-transactions)
-    B -->|Ingest Stream| C[Go Consumer App]
-    C -->|1. Attempt Commit| D[(PostgreSQL)]
-    C -.->|2. Fallback Cache if DB Down| E[(Redis Cache)]```
+    A["Client App"] --> B["Kafka Producer"]
+    B -->|Topics| C[(Kafka Broker)]
+    C -->|Consume| D["Kafka Consumer"]
+    D -->|Write| E["PostgreSQL"]
+    D -->|Cache| F[("Redis Cache")]
+    
+    style B fill:#f9f,stroke:#333
+    style C fill:#ff9,stroke:#333
 
 
 Key Capabilities
